@@ -1,0 +1,157 @@
+{
+  "name": "A Shaw",
+  "email": "Aejshaw3@gmail.com",
+  "phone": "+1 848 269 0628",
+  "address": "San Jose, California (95112), USA",
+  "linkedin": "https://www.linkedin.com/in/johndoe",
+  "github": "https://github.com/johndoe",
+  "summary": "Strategic and technically adept Lead Machine Learning Engineer with 10+ years of proven success designing and deploying enterprise-grade AI/ML systems across diverse domains including NLP, computer vision, LLMs, and time-series forecasting. Expert in building large-scale, production-ready pipelines with a focus on MLOps, model governance, and cloud-native architectures using tools like MLflow, Kubernetes, Docker, and Vertex AI. Deep expertise in LLMs (GPT, BERT, LLaMA) and modern NLP frameworks including LangChain, Hugging Face, and RAG architectures, applied to business-critical systems such as intelligent chatbots, document intelligence, and knowledge retrieval platforms. Proficient in Python, PyTorch, TensorFlow, and Spark, with a strong record of delivering high-impact, measurable results—cutting costs, boosting automation, and accelerating time-to-insight. A trusted leader in AI innovation, team mentorship, and scalable ML engineering.",
+  "skills": [
+    {
+      "name": "Languages & Programming",
+      "tools": [
+      "Python",
+      "SQL",
+      "Bash",
+      "Java",
+      "R",
+      "Scala",
+      "Go"
+    ]
+    },
+    {
+      "name": "Machine Learning & NLP",
+      "tools": [
+      "Hugging Face Transformers",
+      "BERT",
+      "GPT",
+      "LLaMA",
+      "spaCy",
+      "NLTK",
+      "OpenAI APIs",
+      "LangChain",
+      "Semantic Search",
+      "Text Summarization",
+      "Sentiment Analysis",
+      "Topic Modeling",
+      "RAG Pipelines",
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn",
+      "Keras",
+      "XGBoost",
+      "LightGBM",
+      "CatBoost",
+      "CNNs",
+      "RNNs",
+      "LSTMs",
+      "Transformers",
+      "Autoencoders",
+      "GANs",
+      "Diffusion Models",
+      "Reinforcement Learning",
+      "Stable Diffusion",
+      "DALL·E",
+      "Midjourney",
+      "LLMOps",
+      "Prompt Engineering",
+      "Retrieval-Augmented Generation (RAG)"
+    ]
+    },
+    {
+      "name": "Tools & Platforms",
+      "tools": [
+      "Git",
+      "GitHub",
+      "VS Code",
+      "Jupyter Notebooks",
+      "Streamlit",
+      "Dash",
+      "Linux",
+      "Terraform",
+      "Helm",
+      "Tableau",
+      "Power BI",
+      "Docker",
+      "Kubernetes",
+      "MLflow",
+      "Airflow",
+      "DVC",
+      "BentoML",
+      "FastAPI",
+      "ONNX",
+      "Triton Inference Server",
+      "Prometheus",
+      "Grafana",
+      "Ansible"
+    ]
+    },
+    {
+      "name": "Cloud & Data Engineering",
+      "tools": [
+      "AWS (SageMaker, S3, Lambda, EC2)",
+      "GCP (Vertex AI, BigQuery)",
+      "Azure ML",
+      "Databricks",
+      "Snowflake",
+      "Postgres",
+      "MongoDB",
+      "Redis",
+      "Apache Kafka",
+      "Spark",
+      "Beam"
+    ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "VisionGrid AI",
+      "role": "Senior AI Engineer",
+      "start_date": "08/2021",
+      "end_date": "present",
+      "achievements": [
+        "Developed a multimodal LLM-powered platform using GPT-4, LangChain, and FAISS for intelligent enterprise search across millions of documents.",
+        "Built a full-scale MLOps pipeline with MLflow, Kubernetes, and DVC, enabling automated deployment and retraining across multiple environments.",
+        "Delivered a production-grade computer vision system using YOLOv8 and Triton, deployed across 25+ manufacturing lines.",
+        "Created an NLP-based document understanding pipeline (OCR + BERT) to automate claim processing, accelerating throughput for millions of records.",
+        "Led LLaMA and Mistral fine-tuning efforts with domain-specific corpora to improve performance in internal AI agents.",
+        "Mentored a cross-functional team and standardized reproducible ML workflows across engineering squads."
+      ]
+    },
+    {
+      "company": "NeuroInsights Inc.",
+      "role": "Lead AI Engineer",
+      "start_date": "05/2018",
+      "end_date": "06/2022",
+      "achievements": [
+        "Built and fine-tuned transformer-based NLP models for sentiment analysis and topic extraction.",
+        "Created a recommendation engine used in a live environment by over 300K active users, increasing click-through relevance.",
+        "Automated ML experimentation and evaluation workflows with Airflow, MLflow, and cloud-native scripts.",
+        "Managed model deployment lifecycle using AWS SageMaker, Docker, and monitoring pipelines.",
+        "Contributed to long-term architecture decisions and collaborated with data science teams to scale models into production."
+      ]
+    },
+    {
+      "company": "InnoSynth Analytics",
+      "role": "Lead AI Engineer",
+      "start_date": "07/2014",
+      "end_date": "06/2016",
+      "achievements": [
+        "Built time series forecasting models using LSTM and Prophet for financial datasets across 10+ client portfolios.",
+        "Developed RL-based pricing simulations in TensorFlow that led to a notable lift in simulated profitability.",
+        "Delivered internal research papers and conducted workshops to scale adoption of generative and transformer-based models.",
+        "Designed reproducible experiment pipelines with DVC, Git, and containerized workflows using Docker.",
+        "Worked closely with DevOps teams to optimize EC2/S3-based training infrastructure."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "school": "National University of Computer and Emerging Sciences (FAST-NUCES), Islamabad",
+      "start_date": "2010",
+      "end_date": "2014",
+      "degree": "BSc. Computer Science",
+      "courseworks": ["Object Oriented Programming", "DataStructure", "Database", "Artifical Intelligence", "Operating System", "Data Science", "Graph Theory", "Software Engineering"]
+    }
+  ]
+}

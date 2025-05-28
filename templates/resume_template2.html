@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ data.name }} - Resume</title>
+    <style>
+        body {
+            font-family: "Cambria", sans-serif;
+            line-height: 1.2;
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 24px;
+            color: rgb(48, 45, 45);
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            /* text-align: justify; */
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            font-size: 18px;
+            /* color: rgb(55, 54, 54); */
+            background-color: #7bbbd3;
+            padding-left: 2px;
+        }
+
+        .subsection {
+            margin-top: 10px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .contact {
+            font-size: 14px;
+            color: #555;
+            padding: 0;
+        }
+
+        .contact p {
+            margin: 4px 0px;
+        }
+
+        .job-title {
+            font-weight: bold;
+        }
+
+        .link {
+            color: #214263;
+        }
+
+        .job-dates {
+            float: right;
+            font-style: italic;
+            color: #214263;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            flex-wrap: nowrap;
+        }
+
+        .entry-dates {
+            white-space: nowrap;
+            text-align: right;
+        }
+
+        .entry-title {
+            font-weight: bold;
+            color: rgb(52, 50, 50);
+        }
+
+        .entry-title em {
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .skills-columns {
+            display: flex;
+            gap: 40px;
+            justify-content: space-between;
+        }
+
+        .skills-column {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="center">{{ data.name }}</h1>
+    <div class="contact">
+        <p class="center">{{ data.email }} <span class="link">|</span> {{ data.phone }} <span class="link">|</span> {{
+            data.address }}</p>
+        <p class="center">
+            {% if data.linkedin %}<span class="entry-title">LinkedIn:</span> <span class="link">{{ data.linkedin
+                }}</span>{% endif %}
+            {% if data.github %}<span class="entry-title">Github:</span> <span class="link">{{ data.github }}</span>{%
+            endif %}
+
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Summary</h2>
+
+        <p>{{ data.summary }}</p>
+    </div>
+
+    <div class="section">
+        <h2>Education</h2>
+        {% for edu in data.education %}
+        <div class="entry-header">
+            <div class="entry-title">{{ edu.school }}</div>
+            <div class="entry-dates job-dates">{{ edu.start_date }} - {{ edu.end_date }}</div>
+        </div>
+        <div class="link">{{ edu.degree }}</div>
+        {% if edu.courseworks %}
+        <div>
+            <p>
+                <em class="link">Relevant Coursework: </em>
+                {% for course in edu.courseworks %}
+                {{course}}{% if not loop.last %}, {% endif %}
+                {% endfor %}
+            </p>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+
+    <div class="section">
+        <h2>Professional Experience</h2>
+        {% for job in data.experience %}
+        <div class="subsection">
+            <div class="entry-header">
+                <div class="entry-title"> {{ job.role }}, <em>{{job.company}}</em></div>
+                <div class="entry-dates job-dates">{{ job.start_date }} – {{ job.end_date }}</div>
+            </div>
+            <ul>
+                {% for item in job.achievements %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- <div class="section">
+        <h2>Skills</h2>
+        {% for skill in data.skills %}
+        <div class="subsection"><strong class="entry-title">{{skill.name}}:</strong>
+            {% for tool in skill.tools %}
+            {{ tool }}{% if not loop.last %}, {% endif %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div> -->
+    <div class="section">
+        <h2>Skills</h2>
+        <div class="skills-columns">
+            <div class="skills-column">
+                {% for skill in data.skills[:(data.skills | length // 2 + data.skills | length % 2)] %}
+                <div class="subsection">
+                    <strong class="entry-title">{{ skill.name }}:</strong>
+                    {% for tool in skill.tools %}
+                    {{ tool }}{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="skills-column">
+                {% for skill in data.skills[(data.skills | length // 2 + data.skills | length % 2):] %}
+                <div class="subsection">
+                    <strong class="entry-title">{{ skill.name }}:</strong>
+                    {% for tool in skill.tools %}
+                    {{ tool }}{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
